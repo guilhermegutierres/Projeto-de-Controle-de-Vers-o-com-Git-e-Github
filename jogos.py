@@ -76,6 +76,51 @@ def pedra_papel_tesoura():
     else:
         print("Computador ganhou!")
 
+# ==========================#
+# 3 - Jodo do Dado #
+# ==========================#
+import random
+
+def jogar_dado():
+    return random.randint(1, 6)
+
+def jogo_do_dado():
+    print("\n=== JOGO DO DADO ===")
+    pontos_jogador = 0
+    pontos_computador = 0
+
+    for rodada in range(1, 4):
+        input(f"\nPressione ENTER para jogar o dado da rodada {rodada}...")
+
+        dado_jogador = jogar_dado()
+        dado_computador = jogar_dado()
+
+        print(f"Você tirou: {dado_jogador}")
+        print(f"Computador tirou: {dado_computador}")
+
+        if dado_jogador > dado_computador:
+            print("✅ Você venceu a rodada!")
+            pontos_jogador += 1
+        elif dado_computador > dado_jogador:
+            print("❌ Computador venceu a rodada!")
+            pontos_computador += 1
+        else:
+            print("🤝 Empate!")
+
+    print("\n===== PLACAR FINAL =====")
+    print(f"Você: {pontos_jogador}")
+    print(f"Computador: {pontos_computador}")
+
+
+    if pontos_jogador > pontos_computador:
+        print("Parabéns, você venceu o jogo!")
+    elif pontos_computador > pontos_jogador:
+        print("O computador venceu o jogo :( ")
+    else:
+        print(" O jogo terminou empatado!")
+
+jogo_do_dado()       
+
 # ===============#
 # MENU PRINCIPAL #
 # ===============#
@@ -85,7 +130,7 @@ def menu():
         print("\n=== MENU DE JOGOS ===")
         print("Jogo da Velha")
         print("Pedra, Papel, Tesoura")
-        print("Jogo 3")
+        print("Jogo do Dado")
         print("Jogo 4")
         print("Sair")
         opcao = input("Escolha uma opção: ")
@@ -95,9 +140,9 @@ def menu():
         elif opcao == "2":
             pedra_papel_tesoura()
         elif opcao == "3":
-            jogo_tres()
+            jogo_do_dado()
         elif opcao == "4":
-            jogo_quatro()
+            jogo_quatro()            
         elif opcao == "5":
             print("Saindo...")
             break
@@ -107,4 +152,5 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
+
 
