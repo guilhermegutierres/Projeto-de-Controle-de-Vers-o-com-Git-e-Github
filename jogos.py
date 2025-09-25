@@ -1,5 +1,9 @@
 import random
 
+# ==================#
+# 1 - Jogo da velha #
+# ==================#
+
 def print_tabuleiro(tabuleiro):
     for linha in tabuleiro:
         print(" | ".join(linha))
@@ -49,13 +53,38 @@ def jogo_da_velha():
     print_tabuleiro(tabuleiro)
     print("Empate")
 
-jogo_da_velha()
+# ==========================#
+# 2 - Pedra, Papel, Tesoura #
+# ==========================#
+
+def pedra_papel_tesoura():
+    opcoes = ["pedra", "papel", "tesoura"]
+    print("\n=== PEDRA, PAPEL, TESOURA ===")
+    jogador = input("Escolha (pedra/papel/tesoura): ").lower()
+    if jogador not in opcoes:
+        print("Escolha inválida!")
+        return
+    pc = random.choice(opcoes)
+    print(f"Computador escolheu: {pc}")
+
+    if jogador == pc:
+        print("Empate!")
+    elif (jogador == "pedra" and pc == "tesoura") or \
+         (jogador == "papel" and pc == "pedra") or \
+         (jogador == "tesoura" and pc == "papel"):
+        print("Você ganhou!")
+    else:
+        print("Computador ganhou!")
+
+# ================#
+# MENU PRINCIPAL  #
+# ================#
 
 def menu():
     while True:
         print("\n=== MENU DE JOGOS ===")
-        print("1 - Jogo da Velha")
-        print("Jogo 2")
+        print("Jogo da Velha")
+        print("Pedra, Papel, Tesoura")
         print("Jogo 3")
         print("Jogo 4")
         print("Sair")
@@ -64,7 +93,7 @@ def menu():
         if opcao == "1":
             jogo_da_velha()
         elif opcao == "2":
-            jogo_dois()
+            pedra_papel_tesoura()
         elif opcao == "3":
             jogo_tres()
         elif opcao == "4":
@@ -78,4 +107,3 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
-
