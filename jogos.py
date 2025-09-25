@@ -79,7 +79,6 @@ def pedra_papel_tesoura():
 # ==========================#
 # 3 - Jodo do Dado #
 # ==========================#
-import random
 
 def jogar_dado():
     return random.randint(1, 6)
@@ -128,11 +127,10 @@ jogo_do_dado()
 def menu():
     while True:
         print("\n=== MENU DE JOGOS ===")
-        print("Jogo da Velha")
-        print("Pedra, Papel, Tesoura")
-        print("Jogo do Dado")
-        print("Jogo 4")
-        print("Sair")
+        print("1 - Jogo da Velha")
+        print("2 - Pedra, Papel, Tesoura")
+        print("3 - Jogo do Dado")
+        print("4 - Sair")
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
@@ -142,8 +140,6 @@ def menu():
         elif opcao == "3":
             jogo_do_dado()
         elif opcao == "4":
-            jogo_quatro()            
-        elif opcao == "5":
             print("Saindo...")
             break
         else:
@@ -152,5 +148,6 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
+
 
 
