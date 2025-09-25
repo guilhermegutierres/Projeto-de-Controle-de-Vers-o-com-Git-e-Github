@@ -52,14 +52,27 @@ jogo_da_velha()
 def menu():
     while True:
         print("\n=== MENU DE JOGOS ===")
-        print("Jogo 1")
+        print("1 - Jogo da Velha")
         print("Jogo 2")
         print("Jogo 3")
         print("Jogo 4")
         print("Sair")
         opcao = input("Escolha uma opção: ")
 
+        if opcao == "1":
+            jogo_da_velha()
+        elif opcao == "2":
+            jogo_dois()
+        elif opcao == "3":
+            jogo_tres()
+        elif opcao == "4":
+            jogo_quatro()
+        elif opcao == "5":
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida!")
+
 # Iniciar o programa
 if __name__ == "__main__":
-
     menu()
