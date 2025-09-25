@@ -1,3 +1,54 @@
+def print_tabuleiro(tabuleiro):
+    for linha in tabuleiro:
+        print(" | ".join(linha))
+        print("-" * 5)
+
+def verificar_vitoria(tabuleiro, jogador):
+    for i in range(3):
+        if all([tabuleiro[i][j] == jogador for j in range(3)]) or \
+            all([tabuleiro[j][i] == jogador for j in range(3)]):
+            return True
+        if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2] == jogador or \
+            tabuleiro[0][2] == tabuleiro [1][1] == tabuleiro[2][0] == jogador:
+            return True
+        return False
+
+def jogo_da_velha():
+    tabuleiro = [[" " for _ in range(3)] for _ in range(3)]
+    jogador_atual = "X"
+
+    for rodada in range(9):
+        print_tabuleiro(tabuleiro)
+        print(f"Vez do jogador {jogador_atual}")
+        try:
+            linha = int(input("Escolha a linha(0,1,2)"))
+            coluna = int(input("Escolha a coluna(0,1,2)"))
+        except ValueError:
+            print("Entrada inválida, tente novamente")
+            continue
+
+        if linha not in range(3) or coluna not in range(3):
+            print("Posição fora do tabuleiro,tente outra vez")
+            continue
+
+        if tabuleiro[linha][coluna] != " ":
+            print("Posição ocupada, tente outra")
+            continue
+
+        tabuleiro[linha][coluna] = jogador_atual
+
+        if verificar_vitoria(tabuleiro, jogador_atual):
+            print_tabuleiro(tabuleiro)
+            print(f"Jogador {jogador_atual} venceu, parabéns")
+            return
+
+        jogador_atual = "O" if jogador_atual == "X" else "X"
+
+    print_tabuleiro(tabuleiro)
+    print("Empate")
+
+jogo_da_velha()
+
 def menu():
     while True:
         print("\n=== MENU DE JOGOS ===")
@@ -10,4 +61,5 @@ def menu():
 
 # Iniciar o programa
 if __name__ == "__main__":
+
     menu()
