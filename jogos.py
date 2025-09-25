@@ -76,9 +76,9 @@ def pedra_papel_tesoura():
     else:
         print("Computador ganhou!")
 
-# ================#
-# MENU PRINCIPAL  #
-# ================#
+# ===============#
+# MENU PRINCIPAL #
+# ===============#
 
 def menu():
     while True:
@@ -107,3 +107,4 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
+
