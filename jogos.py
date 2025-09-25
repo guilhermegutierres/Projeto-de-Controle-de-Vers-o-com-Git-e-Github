@@ -1,3 +1,5 @@
+import random
+
 def print_tabuleiro(tabuleiro):
     for linha in tabuleiro:
         print(" | ".join(linha))
@@ -76,3 +78,4 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
+
