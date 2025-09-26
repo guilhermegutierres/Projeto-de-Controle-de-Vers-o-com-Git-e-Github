@@ -76,9 +76,9 @@ def pedra_papel_tesoura():
     else:
         print("Computador ganhou!")
 
-# ==========================#
+# =================#
 # 3 - Jodo do Dado #
-# ==========================#
+# =================#
 
 def jogar_dado():
     return random.randint(1, 6)
@@ -148,6 +148,7 @@ def menu():
 # Iniciar o programa
 if __name__ == "__main__":
     menu()
+
 
 
 
