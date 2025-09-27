@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adicionar Receita</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/add.css">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="container">
+
+            <div class="logo">
+            <div class="container logo">
+              <a href="index.html">← Voltar</a>
+            </div>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="rgba(100,205,135,1)"><path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path></svg>
+                </a>
+                <h1>Que fome!</h1>
+            </div>
+            
+            <div class="navbar">
+                <div class="navbar_itens">
+                    <a href="#">Frango</a>
+                    <a href="#">Carne</a>
+                    <a href="#">Massas</a>
+                    <a href="#">Bolos</a>
+                    <a href="#">Doces</a>
+                </div>
+            </div>  
+  </header>
+
+  <main class="container">
+    <form id="formAdd" novalidate>
+      <div id="errorBox" class="errors" style="display:none;"></div>
+
+      <div>
+        <label for="titulo">Título *</label>
+        <input id="titulo" name="titulo" type="text" placeholder="Ex: Bolo de Cenoura" required>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option>Frango</option>
+            <option>Carne</option>
+            <option>Massas</option>
+            <option>Bolos</option>
+            <option>Doces</option>
+            <option>Pães</option>
+            <option>Outros</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="dificuldade">Dificuldade</label>
+          <select id="dificuldade" name="dificuldade">
+            <option>Fácil</option>
+            <option>Médio</option>
+            <option>Difícil</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="tempo">Tempo (min) *</label>
+          <input id="tempo" name="tempo" type="number" min="1" placeholder="Ex: 60" required>
+        </div>
+
+        <div>
+          <label for="imagem">Imagem (PNG / JPG)</label>
+          <input id="imagem" name="imagem" type="file" accept="image/*">
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;align-items:center;">
+        <img id="imgPreview" class="img-preview" alt="preview" src="" style="display:none;" />
+        <div class="help">Pré-visualização automática ao selecionar um arquivo de imagem.</div>
+      </div>
+
+      <div>
+        <label for="ingredientes">Ingredientes * <span class="help">(uma linha por ingrediente)</span></label>
+        <textarea id="ingredientes" name="ingredientes" placeholder="Ex:\n2 ovos\n1 xícara de açúcar" required></textarea>
+      </div>
+
+      <div>
+        <label for="modo">Modo de Preparo *</label>
+        <textarea id="modo" name="modo" placeholder="Descreva o passo a passo" required></textarea>
+      </div>
+
+      <div>
+        <label for="tags">Tags <span class="help">(separe por vírgula)</span></label>
+        <input id="tags" name="tags" type="text" placeholder="ex: rápido, sobremesa, vegano">
+      </div>
+
+      <div class="actions">
+        <button type="submit">Salvar Receita</button>
+        <div id="success" style="display:none;color:green;font-weight:700;">Receita salva!</div>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/armazenamento.js"></script>
+  <script src="js/add.js"></script>
+</body>
+</html>
