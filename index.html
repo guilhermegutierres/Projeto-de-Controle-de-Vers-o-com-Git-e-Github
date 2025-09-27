@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-
 </head>
-<body>
-    
+<body class="light-theme">      
     <header>
         <div class="container">
 
@@ -22,24 +20,26 @@
 
             <div class="navbar">
                 <div class="navbar_itens">
-                <a href="#">Frango</a>
-                <a href="#">Carne</a>
-                <a href="#">Massas</a>
-                <a href="#">Bolos</a>
-                <a href="#">Pães</a>
-                <a href="#">Doces</a>
+                    <a href="#">Frango</a>
+                    <a href="#">Carne</a>
+                    <a href="#">Massas</a>
+                    <a href="#">Bolos</a>
+                    <a href="#">Doces</a>
                 </div>
             </div>
 
             <div class="topbar">
-                <input type="text" placeholder="O que quer cozinhar?" id="search">
-                <i class="ri-search-line"></i>
-                <ul id="results"></ul>
-            </div>
-           
+    <input type="text" placeholder="O que quer cozinhar?" id="search">
+    <button class="btn">Dark</button>
+    <i class="ri-search-line"></i>
+    <ul id="results"></ul>
+</div>
         </div>
+
     </header>
 
+    <script src="js/darkmode.js" defer></script>
+    <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
     <script src="js/armazenamento.js"></script>
     <script defer src="js/filtros.js"></script>
 </body>
