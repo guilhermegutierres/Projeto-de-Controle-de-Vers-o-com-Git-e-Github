@@ -21,6 +21,7 @@ header {
   background-color: rgba(255,255,255,0.95); /* cor anterior corrijida (#fffffff3) */
   padding: 10px 20px;
   height: 120px;
+  
 }
 
 .logo {
@@ -148,10 +149,6 @@ body.dark-theme .topbar .btn:hover {
   margin: 0 12px;        
 }
 
-/* =========================
-   Dark mode
-========================= */
-
 body.dark-theme {
     background-color: #121212;
     color: #ffffff;
@@ -184,3 +181,96 @@ body.dark-theme #results {
 body.dark-theme #results li:hover {
     background-color: #333;
 }
+
+/*============================
+
+Card
+
+===================*/
+
+.container_card{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16ppx;
+  font-family: 'Noyt', sans-serif;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;  
+}
+
+.card {
+   display: flex;      
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;            
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  padding: 14px;
+  height: 200px;
+}
+
+.card img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_card h3{
+  font-weight: 100;
+}
+
+.container_card h1{
+  font-weight: 220;
+}
+
+.btn_card{
+  display: flex;
+  justify-content: space-between; /* 1 à esquerda, outro à direita */
+  margin-top: 10px;  
+}
+
+.container_card .btn_esquerda{
+  margin-top: 10px;
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  border-radius: 12px;
+  background-color: #64cd87;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_card .btn_direita{
+  margin-top: 10px;
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  border-radius: 12px;
+  background-color: #64cd87;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button svg{
+  margin-left: 5px;
+}
+
