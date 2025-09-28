@@ -148,10 +148,6 @@ body.dark-theme .topbar .btn:hover {
   margin: 0 12px;        
 }
 
-/* =========================
-   Dark mode
-========================= */
-
 body.dark-theme {
     background-color: #121212;
     color: #ffffff;
@@ -183,4 +179,25 @@ body.dark-theme #results {
 
 body.dark-theme #results li:hover {
     background-color: #333;
+}
+
+/* =========================
+   Botão Dark Mode (ícone sol/lua)
+========================= */
+.dark-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;      /* aumenta a área clicável */
+}
+
+.dark-toggle i {
+    font-size: 24px;   
+    color: #333;       /* cor no tema claro */
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .dark-toggle i {
+    color: #fff;       /* cor no modo escuro */
 }
