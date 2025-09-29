@@ -49,7 +49,7 @@
 
                 <!-- Coração de favoritos -->
                 <button class="btn">
-                    <a href="listaCompras.html">
+                    <a href="favoritos.html">
                         <i class="ri-heart-line"></i>
                     </a>
                 </button>
@@ -174,5 +174,20 @@
     <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
     <script src="js/armazenamento.js"></script>
     <script defer src="js/filtros.js"></script>
+    <script>
+  document.querySelectorAll(".btn_direita").forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+      const card = botao.closest(".card");
+      const titulo = card.querySelector("h1").innerText;
+      const id = (index+1).toString(); // id simples baseado na ordem
+      const categoria = "Receita"; // você pode melhorar puxando da navbar
+
+      const receita = { id, titulo, categoria };
+
+      armazenamentoAPI.addFavorito(receita);
+      alert(`${titulo} adicionada aos favoritos!`);
+    });
+  });
+</script>
 </body>
 </html>
