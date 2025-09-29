@@ -11,13 +11,17 @@
     <header>
         <div class="container">
 
+            <!-- Logo -->
             <div class="logo">
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="rgba(100,205,135,1)"><path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="rgba(100,205,135,1)">
+                        <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
+                    </svg>
                 </a>
                 <h1>Que fome!</h1>
             </div>
 
+            <!-- Navbar -->
             <div class="navbar">
                 <div class="navbar_itens">
                     <a href="#">Frango</a>
@@ -28,21 +32,34 @@
                 </div>
             </div>
 
-        <div class="topbar">
+            <!-- Topbar: pesquisa, dark mode e favoritos -->
+            <div class="topbar">
 
-            <input type="text" placeholder="O que quer cozinhar?" id="search">
+                <!-- Pesquisa com ícone -->
+                <div class="search-wrapper">
+                    <input type="text" placeholder="O que quer cozinhar?" id="search">
+                    <i class="ri-search-line"></i>
+                    <ul id="results"></ul>
+                </div>
+
+                <!-- Dark mode -->
                 <div class="dark-toggle">
-        <i class="ri-moon-line"></i>
-    </div>
-    <i class="ri-search-line"></i>
-        <i class="ri-search-line"></i>
-    <ul id="results"></ul>
-    <button class="btn"><a href="listaCompras.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></a></button>
-</div>
-       
-    </div>
+                    <i class="ri-moon-line"></i>
+                </div>
+
+                <!-- Coração de favoritos -->
+                <button class="btn">
+                    <a href="listaCompras.html">
+                        <i class="ri-heart-line"></i>
+                    </a>
+                </button>
+
+            </div>
+
+        </div>
     </header>
 
+    <!-- Cards -->
     <div class="container_card">
         <div class="cards">
             <div class="card">

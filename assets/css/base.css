@@ -6,9 +6,9 @@
   font-style: normal; 
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
@@ -17,91 +17,123 @@ a{
   box-sizing: border-box;
 }
 
-header {
-  background-color: rgba(255,255,255,0.95); /* cor anterior corrijida (#fffffff3) */
+/* =========================
+   Header e Topbar
+========================= */
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   padding: 10px 20px;
-  height: 120px;
-  
 }
 
 .logo {
   display: flex;
-  align-items: center; 
-  gap: 10px;   
-  font-family: 'Noyh', sans-serif;    
-  color: rgba(12, 12, 12, 0.767);    
-}
-
-header .container {
-  max-width: 1400px; 
-  margin: 0 auto;    
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
+  gap: 10px;
+  font-family: 'Noyh', sans-serif;
+  color: rgba(12,12,12,0.8);
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-family: 'Noyh', sans-serif;
+}
+
+.navbar_itens a {
+  margin: 0 12px;
+}
+
+/* =========================
+   Topbar
+========================= */
 .topbar {
-    position: relative;
-    display: flex;         
-    align-items: center;   
-    gap: 10px;             
-    width: 100%;
-    max-width: 700px;      
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;   
+  flex-wrap: nowrap;
+}
+
+/* Barra de pesquisa */
+.topbar > div.search-wrapper {
+  flex: 1 1 auto;  
+  min-width: 200px;
+  position: relative;
 }
 
 .topbar input {
-    flex: 1;               
-    height: 55px;
-    padding: 0 16px 0 50px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    outline: none;
-    font-size: 14px;
-    margin-top: 0;         
+  width: 100%;
+  height: 50px;
+  padding: 0 40px 0 12px;
+  box-sizing: border-box;
 }
 
-.topbar .btn {
-    padding: 0 20px;
-    height: 55px;
-    border: none;
-    border-radius: 12px;
-    background-color: #64cd87;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-
-.topbar .btn:hover {
-    background-color: #4caf6e;
-}
-
-body.dark-theme .topbar .btn {
-    background-color: #444;
-    color: #fff;
-}
-
-body.dark-theme .topbar .btn:hover {
-    background-color: #666;
-}
-
-.ri-search-line {
+/* Ícone de pesquisa */
+.topbar .ri-search-line {
   position: absolute;
-  top: 50%;               
-  left: 25px; 
-  width: 18px;
-  height: 18px;
-  pointer-events: none; 
-  transform: translateY(-50%); 
-  margin-top: 0;          
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  pointer-events: none;
 }
 
+/* =========================
+   Botões Dark Mode e Favoritos
+========================= */
+.dark-toggle,
+.topbar .btn {
+  display: flex;               
+  align-items: center;
+  justify-content: center;
+  width: 36px;                 
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;              
+}
 
-#results:empty { 
-  display: none; 
+.dark-toggle i,
+.topbar .btn i {
+  font-size: 24px;
+  display: block;              
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar .btn:hover,
+.dark-toggle:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+body.dark-theme .dark-toggle i,
+body.dark-theme .topbar .btn i {
+  color: #fff;
+}
+
+body.dark-theme .dark-toggle:hover,
+body.dark-theme .topbar .btn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* =========================
+   Autocomplete resultados
+========================= */
+#results:empty {
+  display: none;
 }
 
 #results {
@@ -129,83 +161,71 @@ body.dark-theme .topbar .btn:hover {
   transition: background .15s ease;
 }
 
-#results li + li { margin-top: 4px; }
-
-#results li:hover { 
-  background: #f6f8fb; 
+#results li + li {
+  margin-top: 4px;
 }
 
-.navbar{
-    font-family: 'Noyh', sans-serif;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-size: 20px;
-    margin: 10px;
-    justify-content: space-between;
+#results li:hover {
+  background: #f6f8fb;
 }
 
-.navbar_itens a {
-  margin: 0 12px;        
-}
-
+/* =========================
+   Dark Mode
+========================= */
 body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 body.dark-theme header {
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
 }
 
 body.dark-theme .logo {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 body.dark-theme .navbar a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 body.dark-theme .topbar input {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
 }
 
 body.dark-theme #results {
-    background-color: #222;
-    border: 1px solid #444;
-    color: #fff;
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
 }
 
 body.dark-theme #results li:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
-/*============================
-
-Card
-
-===================*/
-
-.container_card{
+/* =========================
+   Cards
+========================= */
+.container_card {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 16ppx;
-  font-family: 'Noyt', sans-serif;
+  padding: 0 16px;
+  font-family: 'Noyh', sans-serif;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-direction: column; 
-  gap: 20px;  
+  gap: 20px;
 }
 
 .card {
-   display: flex;      
+  display: flex;
   align-items: flex-start;
   gap: 12px;
-  width: 100%;            
+  width: 100%;
   background: #7777772a;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
@@ -224,21 +244,22 @@ Card
   flex-direction: column;
 }
 
-.container_card h3{
+.container_card h3 {
   font-weight: 100;
 }
 
-.container_card h1{
+.container_card h1 {
   font-weight: 220;
 }
 
-.btn_card{
+.btn_card {
   display: flex;
-  justify-content: space-between; /* 1 à esquerda, outro à direita */
-  margin-top: 10px;  
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
-.container_card .btn_esquerda{
+.container_card .btn_esquerda,
+.container_card .btn_direita {
   margin-top: 10px;
   padding: 0 20px;
   height: 35px;
@@ -254,60 +275,89 @@ Card
   align-items: center;
 }
 
-.container_card .btn_direita{
-  margin-top: 10px;
-  padding: 0 20px;
-  height: 35px;
-  border: none;
-  border-radius: 12px;
-  background-color: #64cd87;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-button svg{
+button svg {
   margin-left: 5px;
 }
 
 /* =========================
-   Botão Dark Mode (ícone sol/lua)
+   Responsividade Mobile
 ========================= */
-.dark-toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+@media (max-width: 768px) {
+
+  /* Header container ajusta para coluna */
+  header .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* Navbar: itens ficam em coluna e centralizados */
+  .navbar {
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 2px;      /* aumenta a área clicável */
-}
+    gap: 8px;
+  }
 
-.dark-toggle i {
-    font-size: 24px;   
-    color: #333;       /* cor no tema claro */
-    transition: color 0.3s ease;
-}
+  .navbar_itens a {
+    margin: 4px 6px;
+    font-size: 16px;
+  }
 
-body.dark-theme .dark-toggle i {
-    color: #fff;       /* cor no modo escuro */
-}
+  /* Topbar: permite quebrar linha e ajustar espaçamento */
+  .topbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+  }
 
-.btn{
-  margin-left: 20px;
-  margin-bottom: 14px;
-  padding: 16px;
-  height: 50px;
-  border: none;
-  border-radius: 12px;
-  background-color: #64cd87;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .topbar > .search-wrapper {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .topbar input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .dark-toggle,
+  .topbar .btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Cards: muda layout para coluna, imagem acima */
+  .cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 12px;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .card .info {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .btn_card {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .container_card .btn_esquerda,
+  .container_card .btn_direita {
+    width: 100%;
+  }
 }
