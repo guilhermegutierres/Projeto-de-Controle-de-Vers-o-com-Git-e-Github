@@ -1,17 +1,20 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const switcher = document.querySelector('.btn');
+    const toggle = document.querySelector('.dark-toggle');   // novo botão
+    const icon   = toggle.querySelector('i');                // ícone dentro do botão
 
-    switcher.addEventListener('click', function() {
+    toggle.addEventListener('click', function() {
         if (document.body.classList.contains('light-theme')) {
             document.body.classList.remove('light-theme');
             document.body.classList.add('dark-theme');
-            this.textContent = "Light"; 
+            // troca ícone para sol
+            icon.classList.replace('ri-moon-line', 'ri-sun-line');
         } else {
             document.body.classList.remove('dark-theme');
             document.body.classList.add('light-theme');
-            this.textContent = "Dark";
+            // troca ícone para lua
+            icon.classList.replace('ri-sun-line', 'ri-moon-line');
         }
     });
 });
