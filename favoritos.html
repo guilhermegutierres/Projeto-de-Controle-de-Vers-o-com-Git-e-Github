@@ -1,54 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favoritos ❤️</title>
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <style>
-    /* Estilos para layout do cabeçalho da página favoritos */
-    header .container {
-      max-width: 650px !important;
-      margin: 0 auto !important;
-      padding: 20px 12px 8px 12px !important;
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-    }
-
-    .titulo-favoritos {
-      font-family: 'Noyh', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #252525;
-      letter-spacing: .5px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn_voltar {
-      border: none;
-      background: none;
-      padding: 8px 0;
-      font-size: 1.1rem;
-      color: #6847b5;
-      cursor: pointer;
-      transition: text-decoration .18s;
-      text-decoration: underline;
-    }
-    .btn_voltar:hover {
-      text-decoration: none;
-      color: #4d2b88;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/base.css">
 </head>
-
 <body class="light-theme">
+
   <header>
     <div class="container">
-      <span class="titulo-favoritos">Minhas Receitas Favoritas <span>❤️</span></span>
+      <h1>Minhas Receitas Favoritas ❤️</h1>
       <a href="index.html" class="btn_voltar">← Voltar</a>
     </div>
   </header>
@@ -67,22 +29,18 @@
     if (favoritos.length === 0) {
       container.innerHTML = "<p>Você ainda não favoritou nenhuma receita 😢</p>";
     } else {
-      favoritos.forEach((r) => {
+      favoritos.forEach(r => {
         const card = document.createElement("div");
         card.classList.add("card");
 
         card.innerHTML = `
-  <img src="assets/images/${r.titulo.toLowerCase().replace(/ /g, '')}.jpg" alt="${r.titulo}" />
-  <div class="card_info">
-    <h1>${r.titulo}</h1>
-    <span class="categoria-badge">Categoria: ${r.categoria}</span>
-    <h3>${r.modo || "Descrição não disponível"}</h3>
-    <button onclick="removerFavorito('${r.id}')" class="btn_remover">
-    <span class="icon-trash">🗑️</span> Remover
-    </button>
-  </div>
-`;
-
+          <img src="assets/images/${r.titulo.toLowerCase().replace(/ /g,'')}.jpg" alt="${r.titulo}">
+          <div class="card_info">
+            <h1>${r.titulo}</h1>
+            <p>Categoria: ${r.categoria}</p>
+            <button onclick="removerFavorito('${r.id}')">Remover</button>
+          </div>
+        `;
         container.appendChild(card);
       });
     }

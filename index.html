@@ -78,7 +78,8 @@
                         prática, deliciosa e que conquista pelo 
                         sabor. Com a facilidade proporcionada 
                         pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para qualquer refeição.
+                        uma opção rápida e irresistível para q
+                        ualquer refeição
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -94,10 +95,13 @@
                 <div class="card_info">
                     <h1>Carne Assada</h1>
                     <h3>
-                        A carne assada é uma opção saborosa, 
-                        suculenta e que agrada pelo aroma irresistível. 
-                        Com um preparo simples, ela se torna uma escolha prática 
-                        e deliciosa para qualquer refeição.
+                        A torta de frango de liquidificador 
+                        é a representação perfeita de uma receita 
+                        prática, deliciosa e que conquista pelo 
+                        sabor. Com a facilidade proporcionada 
+                        pelo liquidificador, esta torta se torna 
+                        uma opção rápida e irresistível para q
+                        ualquer refeição
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -112,11 +116,13 @@
                 <div class="card_info">
                     <h1>Mousse de Limão</h1>
                     <h3>
-                        O mousse de limão é leve, cremoso 
-                        e conquista pelo sabor refrescante. 
-                        Com poucos ingredientes e preparo rápido, 
-                        ele se torna uma sobremesa prática e 
-                        irresistível para qualquer momento.
+                        A torta de frango de liquidificador 
+                        é a representação perfeita de uma receita 
+                        prática, deliciosa e que conquista pelo 
+                        sabor. Com a facilidade proporcionada 
+                        pelo liquidificador, esta torta se torna 
+                        uma opção rápida e irresistível para q
+                        ualquer refeição
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -131,11 +137,13 @@
                 <div class="card_info">
                     <h1>Bolo de Morango</h1>
                     <h3>
-                        O bolo de morango é macio, doce 
-                        e encanta pelo frescor da fruta. 
-                        Com uma receita fácil de seguir, 
-                        ele se torna uma opção deliciosa e 
-                        perfeita para qualquer ocasião especial.
+                        A torta de frango de liquidificador 
+                        é a representação perfeita de uma receita 
+                        prática, deliciosa e que conquista pelo 
+                        sabor. Com a facilidade proporcionada 
+                        pelo liquidificador, esta torta se torna 
+                        uma opção rápida e irresistível para q
+                        ualquer refeição
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -150,11 +158,13 @@
                 <div class="card_info">
                     <h1>Pão Francês</h1>
                     <h3>
-                        O pão francês é crocante, quentinho e 
-                        conquista pelo aroma que enche a cozinha.
-                         Com um preparo simples, 
-                         ele se torna uma escolha prática 
-                         e deliciosa para acompanhar qualquer refeição.
+                        A torta de frango de liquidificador 
+                        é a representação perfeita de uma receita 
+                        prática, deliciosa e que conquista pelo 
+                        sabor. Com a facilidade proporcionada 
+                        pelo liquidificador, esta torta se torna 
+                        uma opção rápida e irresistível para q
+                        ualquer refeição
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -170,6 +180,7 @@
     <script src="js/armazenamento.js"></script>
     <script defer src="js/filtros.js"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <script>
@@ -181,6 +192,20 @@
         armazenamentoAPI.addFavorito(receita);
         alert('Receita adicionada aos favoritos!');
       }
+=======
+    <script>
+  document.querySelectorAll(".btn_direita").forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+      const card = botao.closest(".card");
+      const titulo = card.querySelector("h1").innerText;
+      const id = (index+1).toString(); // id simples baseado na ordem
+      const categoria = "Receita"; // você pode melhorar puxando da navbar
+
+      const receita = { id, titulo, categoria };
+
+      armazenamentoAPI.addFavorito(receita);
+      alert(`${titulo} adicionada aos favoritos!`);
+>>>>>>> parent of 2b79054 (Aba de favoritos)
     });
   });
 </script>
