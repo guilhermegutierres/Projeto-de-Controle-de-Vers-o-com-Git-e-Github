@@ -4,51 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favoritos ❤️</title>
-  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/favoritos.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body class="light-theme">
 
   <header>
-    <div class="container">
-      <h1>Minhas Receitas Favoritas ❤️</h1>
-      <a href="index.html" class="btn_voltar">← Voltar</a>
-    </div>
-  </header>
+      <div class="container">
 
-  <div class="container_card">
-    <div id="favoritos-container" class="cards">
-      <!-- Favoritos aparecem aqui via JS -->
-    </div>
+        <!-- Logo -->
+          <div class="logo">
+              <a href="./index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
+                    <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
+                    </svg>
+                    <span>Que fome!</span>
+                </a>
+                
+          </div>
+
+            <!-- Navbar -->
+          <div class="navbar">
+                  <a href="#" class="navbar_itens">Frango</a>
+                  <a href="#" class="navbar_itens">Carne</a>
+                  <a href="#" class="navbar_itens">Massas</a>
+                  <a href="#" class="navbar_itens">Bolos</a>
+                  <a href="#" class="navbar_itens">Doces</a>
+                
+            </div>
+
+            <!-- Topbar: pesquisa, dark mode e favoritos -->
+            <div class="topbar">
+
+                <!-- Pesquisa com ícone -->
+                <div class="search-wrapper">
+                    <input type="text" placeholder="O que quer cozinhar?" id="search">
+                    <i class="ri-search-line"></i>
+                    <ul id="results"></ul>
+                </div>
+
+                <!-- Dark mode -->
+                <div class="dark-toggle">
+                    <i class="ri-moon-line"></i>
+                </div>
+
+                <!-- Coração de favoritos -->
+
+                <div class="btn">
+                    <a href="./favoritos.html">
+                    <i class="ri-heart-line"></i>
+                    </a>
+                </div>
+
+                <div class="btn">
+                    <a href="listaCompras.html">
+                    <i class="ri-shopping-cart-line"></i>
+                        
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+     <div class="container_card">
+    <div class="cards"></div> <!-- PRECISA EXISTIR -->
   </div>
 
-  <script src="js/armazenamento.js"></script>
-  <script>
-    const container = document.getElementById("favoritos-container");
-    const favoritos = armazenamentoAPI.getFavoritos();
-
-    if (favoritos.length === 0) {
-      container.innerHTML = "<p>Você ainda não favoritou nenhuma receita 😢</p>";
-    } else {
-      favoritos.forEach(r => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-
-        card.innerHTML = `
-          <img src="assets/images/${r.titulo.toLowerCase().replace(/ /g,'')}.jpg" alt="${r.titulo}">
-          <div class="card_info">
-            <h1>${r.titulo}</h1>
-            <p>Categoria: ${r.categoria}</p>
-            <button onclick="removerFavorito('${r.id}')">Remover</button>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function removerFavorito(id) {
-      armazenamentoAPI.removeFavorito(id);
-      location.reload(); // Atualiza a página depois de remover
-    }
-  </script>
+  
+<script src="js/armazenamento.js" defer></script>
+<script src="js/favoritos.js" defer></script>
 </body>
 </html>

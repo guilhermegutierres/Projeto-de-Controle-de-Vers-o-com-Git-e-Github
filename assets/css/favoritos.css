@@ -17,9 +17,6 @@ a {
   box-sizing: border-box;
 }
 
-/* =========================
-   Header e Topbar
-========================= */
 header .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -236,80 +233,6 @@ body.dark-theme #results li:hover {
 }
 
 /* =========================
-   Cards
-========================= */
-.container_card {
-  max-width: 1100px;
-  margin: 40px auto 0 auto; /* 40px de espaço no topo */
-  padding: 0 16px;
-  font-family: 'Noyh', sans-serif;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column; 
-  gap: 20px;
-}
-
-.card {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  width: 100%;
-  background: #7777772a;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  padding: 14px;
-  height: 200px;
-}
-
-.card img {
-  width: 200px;
-  height: auto;
-  border-radius: 4px;
-}
-
-.card .info {
-  display: flex;
-  flex-direction: column;
-}
-
-.container_card h3 {
-  font-weight: 100;
-}
-
-.container_card h1 {
-  font-weight: 220;
-}
-
-.btn_card {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.container_card .btn_esquerda,
-.container_card .btn_direita {
-  margin-top: 10px;
-  padding: 0 20px;
-  height: 35px;
-  border: none;
-  border-radius: 12px;
-  background-color: #64cd87;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-button svg {
-  margin-left: 5px;
-}
-
-/* =========================
    Responsividade Mobile
 ========================= */
 @media (max-width: 768px) {
@@ -393,25 +316,123 @@ button svg {
   }
 }
 
+/*Cards*/
 
-/*Pop-up Favoritar*/
+/* favoritos.css */
 
-.popup {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #64cd87;
-  color: #fff;
-  padding: 12px 16px;
+.container_card {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  font-family: 'Noyh', sans-serif;
+}
+
+/* lista de cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* card */
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  background: #7777772a;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  padding: 14px;
+}
+
+/* imagem do card */
+.card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
-  font-weight: 600;
-  box-shadow: 0 6px 16px rgba(0,0,0,.2);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease;
-  z-index: 9999;
+  flex-shrink: 0;
 }
 
-.popup.show {
-  opacity: 1;
+/* infos do card (ATENÇÃO: classe correta é .card_info) */
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0; /* evita overflow do h3 */
 }
+
+.card_info h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card_info h3 {
+  margin: 0;
+  font-weight: 400;
+  color: #1f1f1f;
+  line-height: 1.4;
+  /* clampa descrição em 3 linhas pra não esticar o card */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ações */
+.btn_card {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.container_card .btn_esquerda,
+.container_card .btn_direita,
+.container_card .btn-remove {
+  padding: 0 16px;
+  height: 36px;
+  border: none;
+  border-radius: 12px;
+  background-color: #64cd87;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .06s ease, filter .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.container_card .btn-remove {
+  background-color: #ff6b6b;
+}
+
+.container_card .btn_esquerda:hover,
+.container_card .btn_direita:hover,
+.container_card .btn-remove:hover {
+  filter: brightness(0.95);
+}
+
+.container_card .btn_esquerda:active,
+.container_card .btn_direita:active,
+.container_card .btn-remove:active {
+  transform: translateY(1px);
+}
+
+button svg { margin-left: 4px; }
+
+/* responsivo */
+@media (max-width: 640px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
