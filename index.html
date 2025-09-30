@@ -13,23 +13,23 @@
 
             <!-- Logo -->
             <div class="logo">
-                <a href="../index.html">
+                <a href="./index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
                         <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
                     </svg>
+                    <span>Que fome!</span>
                 </a>
-                <h1>Que fome!</h1>
+                
             </div>
 
             <!-- Navbar -->
             <div class="navbar">
-                <div class="navbar_itens">
-                    <a href="#">Frango</a>
-                    <a href="#">Carne</a>
-                    <a href="#">Massas</a>
-                    <a href="#">Bolos</a>
-                    <a href="#">Doces</a>
-                </div>
+                    <a href="#" class="navbar_itens">Frango</a>
+                    <a href="#" class="navbar_itens">Carne</a>
+                    <a href="#" class="navbar_itens">Massas</a>
+                    <a href="#" class="navbar_itens">Bolos</a>
+                    <a href="#" class="navbar_itens">Doces</a>
+                
             </div>
 
             <!-- Topbar: pesquisa, dark mode e favoritos -->
@@ -48,14 +48,17 @@
                 </div>
 
                 <!-- Coração de favoritos -->
-<<<<<<< HEAD
+
                 <div class="btn">
-                    <a href="favoritos.html">
-=======
-                <button class="btn">
+                    <a href="./favoritos.html">
+                    <i class="ri-heart-line"></i>
+                    </a>
+                </div>
+
+                <div class="btn">
                     <a href="listaCompras.html">
->>>>>>> parent of b8fdb72 (Criação da pagina de favoritos)
-                        <i class="ri-heart-line"></i>
+                    <i class="ri-shopping-cart-line"></i>
+                        
                     </a>
                 </div>
 
@@ -179,37 +182,8 @@
     <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
     <script src="js/armazenamento.js"></script>
     <script defer src="js/filtros.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<script>
-  document.querySelectorAll('.btn_direita').forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      const receitaId = (index + 1).toString();
-      const receita = armazenamentoAPI.getReceita(receitaId);
-      if (receita) {
-        armazenamentoAPI.addFavorito(receita);
-        alert('Receita adicionada aos favoritos!');
-      }
-=======
-    <script>
-  document.querySelectorAll(".btn_direita").forEach((botao, index) => {
-    botao.addEventListener("click", () => {
-      const card = botao.closest(".card");
-      const titulo = card.querySelector("h1").innerText;
-      const id = (index+1).toString(); // id simples baseado na ordem
-      const categoria = "Receita"; // você pode melhorar puxando da navbar
 
-      const receita = { id, titulo, categoria };
-
-      armazenamentoAPI.addFavorito(receita);
-      alert(`${titulo} adicionada aos favoritos!`);
->>>>>>> parent of 2b79054 (Aba de favoritos)
-    });
-  });
-</script>
-=======
->>>>>>> parent of b8fdb72 (Criação da pagina de favoritos)
 </body>
 </html>
