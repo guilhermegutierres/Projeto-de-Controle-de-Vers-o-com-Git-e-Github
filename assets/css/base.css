@@ -31,7 +31,7 @@ header .container {
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: 'Noyh', sans-serif;
@@ -84,6 +84,8 @@ header .container {
   color: #888;
   pointer-events: none;
 }
+
+
 
 /* =========================
    Botões Dark Mode e Favoritos
