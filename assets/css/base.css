@@ -313,7 +313,7 @@ button svg {
 ========================= */
 @media (max-width: 768px) {
 
-  /* Header container ajusta para coluna */
+  /* Header container */
   header .container {
     flex-direction: column;
     align-items: stretch;
@@ -321,19 +321,35 @@ button svg {
     background-color: rgb(119, 119, 119);
   }
 
-  /* Navbar: itens ficam em coluna e centralizados */
+  /* Navbar: scroll horizontal */
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    overflow-x: auto;
     gap: 8px;
+    padding: 8px 4px;
+    flex-wrap: nowrap;
+  }
+  .navbar::-webkit-scrollbar {
+    display: none;
   }
 
-  .navbar_itens a {
-    margin: 4px 6px;
-    font-size: 16px;
+  .navbar_itens {
+    white-space: nowrap;
+    font-size: 16px; 
+    padding: 5px 10px; 
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, color 0.2s ease;
+    flex-shrink: 0; 
   }
 
-  /* Topbar: permite quebrar linha e ajustar espaçamento */
+  .navbar_itens:hover {
+    background: rgba(100, 205, 135, 0.15);
+  }
+
+  /* Topbar */
   .topbar {
     flex-wrap: wrap;
     gap: 8px;
@@ -356,12 +372,12 @@ button svg {
     height: 36px;
   }
 
-  /* Espaço extra pros cards não grudarem no topo */
+  /* Espaço pros cards não grudarem */
   .container_card {
     margin-top: 20px;
   }
 
-  /* Cards: muda layout para coluna, imagem acima */
+  /* Cards */
   .cards {
     flex-direction: column;
     gap: 16px;
@@ -397,9 +413,10 @@ button svg {
   }
 }
 
-/* Ajuste extra para telas menores que 480px */
+/* Telas menores que 480px */
 @media (max-width: 480px) {
-  .navbar_itens a {
+  .navbar_itens {
     font-size: 14px;
+    padding: 4px 8px;
   }
 }
