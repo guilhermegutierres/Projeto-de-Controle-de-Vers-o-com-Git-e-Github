@@ -314,12 +314,12 @@ button svg {
 @media (max-width: 768px) {
 
   /* Header container ajusta para coluna */
-    header .container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-        background-color: rgb(119, 119,119);
-    }
+  header .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background-color: rgb(119, 119, 119);
+  }
 
   /* Navbar: itens ficam em coluna e centralizados */
   .navbar {
@@ -356,6 +356,11 @@ button svg {
     height: 36px;
   }
 
+  /* Espaço extra pros cards não grudarem no topo */
+  .container_card {
+    margin-top: 20px;
+  }
+
   /* Cards: muda layout para coluna, imagem acima */
   .cards {
     flex-direction: column;
@@ -389,5 +394,12 @@ button svg {
   .container_card .btn_esquerda,
   .container_card .btn_direita {
     width: 100%;
+  }
+}
+
+/* Ajuste extra para telas menores que 480px */
+@media (max-width: 480px) {
+  .navbar_itens a {
+    font-size: 14px;
   }
 }
