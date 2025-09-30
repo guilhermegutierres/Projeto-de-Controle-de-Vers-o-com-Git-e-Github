@@ -73,8 +73,7 @@
                         prática, deliciosa e que conquista pelo 
                         sabor. Com a facilidade proporcionada 
                         pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
+                        uma opção rápida e irresistível para qualquer refeição.
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -90,13 +89,10 @@
                 <div class="card_info">
                     <h1>Carne Assada</h1>
                     <h3>
-                        A torta de frango de liquidificador 
-                        é a representação perfeita de uma receita 
-                        prática, deliciosa e que conquista pelo 
-                        sabor. Com a facilidade proporcionada 
-                        pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
+                        A carne assada é uma opção saborosa, 
+                        suculenta e que agrada pelo aroma irresistível. 
+                        Com um preparo simples, ela se torna uma escolha prática 
+                        e deliciosa para qualquer refeição.
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -111,13 +107,11 @@
                 <div class="card_info">
                     <h1>Mousse de Limão</h1>
                     <h3>
-                        A torta de frango de liquidificador 
-                        é a representação perfeita de uma receita 
-                        prática, deliciosa e que conquista pelo 
-                        sabor. Com a facilidade proporcionada 
-                        pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
+                        O mousse de limão é leve, cremoso 
+                        e conquista pelo sabor refrescante. 
+                        Com poucos ingredientes e preparo rápido, 
+                        ele se torna uma sobremesa prática e 
+                        irresistível para qualquer momento.
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -132,13 +126,11 @@
                 <div class="card_info">
                     <h1>Bolo de Morango</h1>
                     <h3>
-                        A torta de frango de liquidificador 
-                        é a representação perfeita de uma receita 
-                        prática, deliciosa e que conquista pelo 
-                        sabor. Com a facilidade proporcionada 
-                        pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
+                        O bolo de morango é macio, doce 
+                        e encanta pelo frescor da fruta. 
+                        Com uma receita fácil de seguir, 
+                        ele se torna uma opção deliciosa e 
+                        perfeita para qualquer ocasião especial.
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -153,13 +145,11 @@
                 <div class="card_info">
                     <h1>Pão Francês</h1>
                     <h3>
-                        A torta de frango de liquidificador 
-                        é a representação perfeita de uma receita 
-                        prática, deliciosa e que conquista pelo 
-                        sabor. Com a facilidade proporcionada 
-                        pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
+                        O pão francês é crocante, quentinho e 
+                        conquista pelo aroma que enche a cozinha.
+                         Com um preparo simples, 
+                         ele se torna uma escolha prática 
+                         e deliciosa para acompanhar qualquer refeição.
                     </h3>
                     <div class="btn_card">
                     <button class="btn_esquerda">Ingredientes</button>
@@ -174,18 +164,17 @@
     <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
     <script src="js/armazenamento.js"></script>
     <script defer src="js/filtros.js"></script>
-    <script>
-  document.querySelectorAll(".btn_direita").forEach((botao, index) => {
-    botao.addEventListener("click", () => {
-      const card = botao.closest(".card");
-      const titulo = card.querySelector("h1").innerText;
-      const id = (index+1).toString(); // id simples baseado na ordem
-      const categoria = "Receita"; // você pode melhorar puxando da navbar
-
-      const receita = { id, titulo, categoria };
-
-      armazenamentoAPI.addFavorito(receita);
-      alert(`${titulo} adicionada aos favoritos!`);
+  });
+</script>
+<script>
+  document.querySelectorAll('.btn_direita').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      const receitaId = (index + 1).toString();
+      const receita = armazenamentoAPI.getReceita(receitaId);
+      if (receita) {
+        armazenamentoAPI.addFavorito(receita);
+        alert('Receita adicionada aos favoritos!');
+      }
     });
   });
 </script>

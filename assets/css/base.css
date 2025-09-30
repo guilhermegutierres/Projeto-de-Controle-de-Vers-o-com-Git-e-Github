@@ -239,44 +239,45 @@ body.dark-theme #results li:hover {
   border-radius: 4px;
 }
 
-.card .info {
+.card_info {
+  position: relative; /* necessário para posicionar o botão dentro */
+  flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  min-height: 160px; /* espaço para o botão */
 }
 
-.container_card h3 {
-  font-weight: 100;
+.card_info h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #313131;
 }
 
-.container_card h1 {
-  font-weight: 220;
+.card_info p {
+  margin: 2px 0;
+  font-size: 1rem;
+  color: #5a5a5a;
 }
 
-.btn_card {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+.card_info h3 {
+  margin: 2px 0;
+  font-size: 1.05rem;
+  color: #222;
+  font-family: 'Noyh', sans-serif;
+  font-weight: 500;
 }
 
-.container_card .btn_esquerda,
-.container_card .btn_direita {
-  margin-top: 10px;
-  padding: 0 20px;
-  height: 35px;
-  border: none;
+.categoria-badge {
+  display: inline-block;
+  background: #eaf2ed;
+  color: #3fa067;
+  font-weight: 600;
   border-radius: 12px;
-  background-color: #64cd87;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-button svg {
-  margin-left: 5px;
+  font-size: 1rem;
+  padding: 3px 14px;
+  margin-bottom: 6px;
+  margin-top: 3px;
 }
 
 /* =========================
@@ -360,4 +361,149 @@ button svg {
   .container_card .btn_direita {
     width: 100%;
   }
+  
+  .container_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.cards {
+  width: 80%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: #f1f1f1;
+  padding: 18px 28px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.card_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card_info h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #313131;
+}
+
+.card_info p {
+  margin: 2px 0;
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+.titulo-favoritos {
+  font-family: 'Noyh', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #252525;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.container_card {
+  max-width: 950px;
+  margin: 28px auto 0 auto;
+  padding: 0 14px;
+}
+
+.btn_voltar {
+  border: none;
+  background: none;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  color: #6847b5;
+  cursor: pointer;
+  transition: text-decoration .18s;
+  text-decoration: underline;
+}
+.btn_voltar:hover {
+  text-decoration: none;
+  color: #4d2b88;
+}
+
+.card_info h3 {
+  margin: 2px 0;
+  font-size: 1.05rem;
+  color: #222;
+  font-family: 'Noyh', sans-serif;
+  font-weight: 500;
+}
+.categoria-badge {
+  display: inline-block;
+  background: #eaf2ed;
+  color: #3fa067;
+  font-weight: 600;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 3px 14px;
+  margin-bottom: 6px;
+  margin-top: 3px;
+}
+.card_info {
+  position: relative; /* necessário para posicionar o botão dentro */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 160px; /* espaço para o botão */
+}
+
+.btn_remover {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 140px;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #ff6363 40%, #d12121 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.12rem;
+  font-family: 'Noyh', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(220,50,30,0.15);
+  transition: background 0.18s ease, transform 0.18s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  z-index: 20;
+}
+
+.btn_remover:hover {
+  background: linear-gradient(90deg, #d12121 20%, #ff6363 80%);
+  transform: scale(1.08);
+}
+
+.btn_remover .icon-trash {
+  font-size: 1.25em;
+  margin-right: 4px;
+}
+
 }
