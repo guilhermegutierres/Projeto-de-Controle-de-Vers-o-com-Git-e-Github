@@ -5,16 +5,73 @@
     padding: 18px; 
 }
 
-form { 
-    display: grid; 
-    gap: 12px; 
-    background: rgba(255,255,255,0.95); 
-    padding: 18px; 
-    border-radius: 10px; 
+form {
+    display: grid;
+    gap: 12px;
+    background: rgba(255,255,255,0.95);
+    padding: 18px;
+    border-radius: 10px;
+    font-family: 'Noyh', sans-serif;
 }
-label { 
-    font-weight: 600; 
-    font-size: 14px; 
+label {
+    font-weight: 600;
+    font-family: 'Noyh', sans-serif;
+}
+
+/* Container do input de arquivo */
+.file-input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.custom-file-input {
+    display: none;
+}
+
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.file-input-label:hover {
+    background: linear-gradient(135deg, #45a049, #276829);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.file-input-label:active {
+    transform: translateY(0);
+}
+
+
+.file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+.file-input-label i {
+    font-size: 18px;
 }
 
 input[type="text"], 
@@ -39,18 +96,54 @@ textarea {
     gap: 12px; 
 }
 
-.img-preview { 
-    width: 160px; 
-    height: 120px; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    border: 1px 
-    solid #ddd; 
+/* Seção de imagem */
+.image-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
 }
 
-.help { 
-    font-size: 13px; 
-    color: #666; 
+.image-section h3 {
+        margin-bottom: 15px;
+        color: #2d3436;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: start;
+    margin-top: 15px;
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.preview-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-preview {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.help {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
 }
 
 .errors { 
@@ -74,4 +167,48 @@ button[type="submit"]{
     border-radius:8px; 
     cursor:pointer; 
     font-weight:700; 
+}
+
+/* Estilos de validação */
+input.error,
+select.error,
+textarea.error {
+    border-color: #ff4444 !important;
+    background-color: #fff8f8;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Transições suaves */
+input, select, textarea, .file-input-label, button {
+    transition: all 0.3s ease;
+}
+
+    
+button[type="submit"]:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .preview-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .preview-image {
+        order: -1;
+    }
+
+    .img-preview {
+        width: 100%;
+        max-width: 250px;
+        height: 120px;
+    }
 }

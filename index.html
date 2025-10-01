@@ -1,195 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Que Fome!</title>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Que Fome!</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
-<body class="light-theme">      
-    <header>
-        <div class="container">
+<body class="light-theme">
+  <header>
+    <div class="container">
 
-            <!-- Logo -->
-            <div class="logo">
-                <a href="./index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
-                        <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
-                    </svg>
-                    <span>Que fome!</span>
-                </a>
-                
-            </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
+            <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
+          </svg>
+          <span>Que fome!</span>
+        </a>
+      </div>
 
-            <!-- Navbar -->
-            <div class="navbar">
-                    <a href="#" class="navbar_itens">Frango</a>
-                    <a href="#" class="navbar_itens">Carne</a>
-                    <a href="#" class="navbar_itens">Massas</a>
-                    <a href="#" class="navbar_itens">Bolos</a>
-                    <a href="#" class="navbar_itens">Doces</a>
-                
-            </div>
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="#" class="navbar_itens">Frango</a>
+        <a href="#" class="navbar_itens">Carne</a>
+        <a href="#" class="navbar_itens">Massas</a>
+        <a href="#" class="navbar_itens">Bolos</a>
+        <a href="#" class="navbar_itens">Doces</a>
+      </div>
 
-            <!-- Topbar: pesquisa, dark mode e favoritos -->
-            <div class="topbar">
+      <!-- Topbar: pesquisa, dark mode e favoritos -->
+      <div class="topbar">
 
-                <!-- Pesquisa com ícone -->
-                <div class="search-wrapper">
-                    <input type="text" placeholder="O que quer cozinhar?" id="search">
-                    <i class="ri-search-line"></i>
-                    <ul id="results"></ul>
-                </div>
-
-                <!-- Dark mode -->
-                <div class="dark-toggle">
-                    <i class="ri-moon-line"></i>
-                </div>
-
-                <!-- Coração de favoritos -->
-
-                <div class="btn">
-                    <a href="/favoritos.html">
-                    <i class="ri-heart-line"></i>
-                    </a>
-                </div>
-
-                <div class="btn">
-                    <a href="listaCompras.html">
-                    <i class="ri-shopping-cart-line"></i>
-                        
-                    </a>
-                </div>
-
-            </div>
-
+        <!-- Pesquisa com ícone -->
+        <div class="search-wrapper">
+          <input type="text" placeholder="O que quer cozinhar?" id="search" />
+          <i class="ri-search-line"></i>
+          <ul id="results"></ul>
         </div>
-    </header>
 
-    <!-- Cards -->
-    <div class="container_card">
-        <div class="cards">
-            <div class="card" data-id="1">
-                <img src="assets/images/tortadefrango.jpg" alt="torta_de_frango">
-            
-                <div class="card_info">
-                    <h1>Torta de Frango</h1>
-                    <h3>
-                        A torta de frango de liquidificador 
-                        é a representação perfeita de uma receita 
-                        prática, deliciosa e que conquista pelo 
-                        sabor. Com a facilidade proporcionada 
-                        pelo liquidificador, esta torta se torna 
-                        uma opção rápida e irresistível para q
-                        ualquer refeição
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="2">
-                <img src="assets/images/carneassada.jpg" alt="torta_de_frango">
-            
-                <div class="card_info">
-                    <h1>Carne Assada</h1>
-                    <h3>
-                       A carne assada na panela de pressão é uma receita prática, suculenta e cheia de sabor. A panela de pressão acelera o cozimento e o resultado é perfeito para um almoço ou jantar especial. Esse prato vai encantar a todos com seu sabor incrível e facilidade de preparo.
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="3">
-                <img src="assets/images/moussedelimao.jpg" alt="torta_de_frango">
-            
-                <div class="card_info">
-                    <h1>Mousse de Limão</h1>
-                    <h3>
-                        O mousse de limão é uma sobremesa clássica que combina perfeitamente o sabor cítrico do limão com a suavidade e a leveza de uma textura aerada. Esta receita é uma verdadeira explosão de frescor e prazer para o paladar. 
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="4">
-                <img src="assets/images/bolodemorango.jpg" alt="torta_de_frango">
-            
-                <div class="card_info">
-                    <h1>Bolo de Morango</h1>
-                    <h3>
-                        Esse bolo de morango é uma delícia, bem refrescante e saboroso, e vai agradar a todos na sua comemoração!
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="5">
-                <img src="assets/images/paofrances.jpg" alt="torta_de_frango">
-            
-                <div class="card_info">
-                    <h1>Pão Francês</h1>
-                    <h3>
-                        O pão francês é um clássico do café da manhã brasileiro: crocante por fora, macio e leve por dentro. Perfeito para acompanhar manteiga derretida, recheios salgados ou até mesmo doces, ele combina simplicidade e sabor em qualquer momento do dia.
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-id="6">
-                <img src="assets/images/macarrao.jpg" alt="macarrao">
-            
-                <div class="card_info">
-                    <h1>Macarrão Alho e Óleo</h1>
-                    <h3>
-                        Macarrão alho e óleo simples, rápido e cheio de sabor, com aquele toque caseiro que conquista em qualquer refeição.
-                    </h3>
-                    <div class="btn_card">
-                    <button class="btn_esquerda">Ingredientes</button>
-                    <button class="btn_direita btn-fav" type="button">Favoritar<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(253,1,1,1)"><path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path></svg></button>
-                    </div>
-                </div>
-            </div>
+        <!-- Dark mode -->
+        <div class="dark-toggle">
+          <i class="ri-moon-line"></i>
         </div>
+
+        <!-- Coração de favoritos -->
+        <div class="btn">
+          <a href="./favoritos.html">
+            <i class="ri-heart-line"></i>
+          </a>
+        </div>
+
+        <div class="btn">
+          <a href="listaCompras.html">
+            <i class="ri-shopping-cart-line"></i>
+          </a>
+        </div>
+
+      </div>
     </div>
+  </header>
 
-
-<div id="popup-favorito" class="popup">
-  Item favoritado!
-</div>
-
-<script src="js/darkmode.js" defer></script>
-<noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
-<script src="js/armazenamento.js" defer></script>
-<script src="js/filtros.js" defer></script>
-<script src="js/index.js" defer></script>
-   
-<footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; 2025 Que Fome! — Todos os direitos reservados.</p>
-    <nav class="footer-nav">
-      <a href="index.html">Início</a>
-      <a href="favoritos.html">Favoritos</a>
-      <a href="listaCompras.html">Lista de Compras</a>
-    </nav>
+  <!-- Cards Dinâmicos -->
+  <div class="container_card">
+    <div class="cards">
+      <!-- Os cards serão carregados dinamicamente pelo JavaScript -->
+    </div>
   </div>
-</footer>
 
+  <!-- Botão flutuante: adicionar receita -->
+  <a href="./add.html" class="floating-btn">
+    <div class="icon">
+      <i class="ri-add-line"></i>
+    </div>
+    <div class="text">Quer sugerir uma receita?</div>
+  </a>
+
+  <!-- Pop-up favorito -->
+  <div id="popup-favorito" class="popup">Item favoritado!</div>
+
+  <!-- Scripts (prioridade main) -->
+  <script src="js/darkmode.js" defer></script>
+  <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
+  <script src="js/armazenamento.js"></script>
+  <script src="js/cardDinamico.js"></script>
+  <script src="js/filtros.js" defer></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Que Fome! — Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="listaCompras.html">Lista de Compras</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
