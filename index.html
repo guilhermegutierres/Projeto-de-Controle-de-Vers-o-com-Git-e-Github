@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Que Fome!</title>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Que Fome!</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body class="light-theme">
-    <header>
-        <div class="container">
+  <header>
+    <div class="container">
 
-            <!-- Logo -->
-            <div class="logo">
-                <a href="./index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
-                        <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
-                    </svg>
-                    <span>Que fome!</span>
-                </a>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
+            <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
+          </svg>
+          <span>Que fome!</span>
+        </a>
+      </div>
 
-            </div>
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="#" class="navbar_itens">Frango</a>
+        <a href="#" class="navbar_itens">Carne</a>
+        <a href="#" class="navbar_itens">Massas</a>
+        <a href="#" class="navbar_itens">Bolos</a>
+        <a href="#" class="navbar_itens">Doces</a>
+      </div>
 
-            <!-- Navbar -->
-            <div class="navbar">
-                <a href="#" class="navbar_itens">Frango</a>
-                <a href="#" class="navbar_itens">Carne</a>
-                <a href="#" class="navbar_itens">Massas</a>
-                <a href="#" class="navbar_itens">Bolos</a>
-                <a href="#" class="navbar_itens">Doces</a>
+      <!-- Topbar: pesquisa, dark mode e favoritos -->
+      <div class="topbar">
 
-            </div>
-
-            <!-- Topbar: pesquisa, dark mode e favoritos -->
-            <div class="topbar">
-
-                <!-- Pesquisa com ícone -->
-                <div class="search-wrapper">
-                    <input type="text" placeholder="O que quer cozinhar?" id="search">
-                    <i class="ri-search-line"></i>
-                    <ul id="results"></ul>
-                </div>
-
-                <!-- Dark mode -->
-                <div class="dark-toggle">
-                    <i class="ri-moon-line"></i>
-                </div>
-
-                <!-- Coração de favoritos -->
-
-                <div class="btn">
-                    <a href="./favoritos.html">
-                        <i class="ri-heart-line"></i>
-                    </a>
-                </div>
-
-                <div class="btn">
-                    <a href="listaCompras.html">
-                        <i class="ri-shopping-cart-line"></i>
-
-                    </a>
-                </div>
-
-            </div>
-
+        <!-- Pesquisa com ícone -->
+        <div class="search-wrapper">
+          <input type="text" placeholder="O que quer cozinhar?" id="search" />
+          <i class="ri-search-line"></i>
+          <ul id="results"></ul>
         </div>
-    </header>
-    
-    <!-- Cards Dinâmicos -->
-    <div class="container_card">
-        <div class="cards">
-            <!-- Os cards serão carregados dinamicamente pelo JavaScript -->
+
+        <!-- Dark mode -->
+        <div class="dark-toggle">
+          <i class="ri-moon-line"></i>
         </div>
+
+        <!-- Coração de favoritos -->
+        <div class="btn">
+          <a href="./favoritos.html">
+            <i class="ri-heart-line"></i>
+          </a>
+        </div>
+
+        <div class="btn">
+          <a href="listaCompras.html">
+            <i class="ri-shopping-cart-line"></i>
+          </a>
+        </div>
+
+      </div>
     </div>
-    
+  </header>
 
-    <a href="./add.html" class="floating-btn">
+  <!-- Cards Dinâmicos -->
+  <div class="container_card">
+    <div class="cards">
+      <!-- Os cards serão carregados dinamicamente pelo JavaScript -->
+    </div>
+  </div>
 
-        <div class="icon">
-            <i class="ri-add-line"></i>
-        </div>
-        <div class="text">
-            Quer sugerir uma receita?
-        </div>
-    </a>
+  <!-- Botão flutuante: adicionar receita -->
+  <a href="./add.html" class="floating-btn">
+    <div class="icon">
+      <i class="ri-add-line"></i>
+    </div>
+    <div class="text">Quer sugerir uma receita?</div>
+  </a>
 
-    <script src="js/darkmode.js" defer></script>
-    <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
-    <script src="js/armazenamento.js"></script>
-    <script src="js/cardDinamico.js"></script>
-    <script defer src="js/filtros.js"></script>
+  <!-- Pop-up favorito -->
+  <div id="popup-favorito" class="popup">Item favoritado!</div>
 
+  <!-- Scripts (prioridade main) -->
+  <script src="js/darkmode.js" defer></script>
+  <noscript>Você precisa ativar o JavaScript para visualizar o site por completo.</noscript>
+  <script src="js/armazenamento.js"></script>
+  <script src="js/cardDinamico.js"></script>
+  <script src="js/filtros.js" defer></script>
 
-
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Que Fome! — Todos os direitos reservados.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Início</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="listaCompras.html">Lista de Compras</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
