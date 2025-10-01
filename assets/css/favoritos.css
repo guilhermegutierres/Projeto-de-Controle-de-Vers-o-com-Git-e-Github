@@ -375,10 +375,6 @@ body.dark-theme #results li:hover {
   font-weight: 400;
   color: #1f1f1f;
   line-height: 1.4;
-  /* clampa descrição em 3 linhas pra não esticar o card */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
