@@ -28,7 +28,7 @@ const armazenamentoAPI = (() => {
     categoria:"Bolos",
     tempo:60,
     descricao:"Bolo macio e fofinho com cobertura de morango fresco. Ideal para sobremesas e comemorações.",
-    imagem:"assets/images/bolomorango.jpg"
+    imagem:"assets/images/bolodemorango.jpg"
   },
   {
     id:"6",
@@ -36,7 +36,7 @@ const armazenamentoAPI = (() => {
     categoria:"Massas",
     tempo:60,
     descricao:"Receita simples e rápida de macarrão alho e óleo, com sabor marcante e aquele toque caseiro.",
-    imagem:"assets/images/macarraoalhoeoleo.jpg"
+    imagem:"assets/images/macarrao.jpg"
   },
   {
     id:"5",
@@ -52,7 +52,7 @@ const armazenamentoAPI = (() => {
     categoria:"Doces",
     tempo:60,
     descricao:"Sobremesa leve e refrescante, mousse de limão com equilíbrio perfeito entre o doce e o ácido.",
-    imagem:"assets/images/mousselimao.jpg"
+    imagem:"assets/images/moussedelimao.jpg"
   }
         ];
 
