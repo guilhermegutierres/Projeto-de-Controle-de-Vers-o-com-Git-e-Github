@@ -1,7 +1,7 @@
 # Projeto-de-Controle-de-Vers-o-com-Git-e-Github
 
 ### Integrantes e funções:
-João Pedro Natividade - Criação da página de favoritos
+João Pedro Natividade - Criação da página de adicionar receitas e polimento geral
 João Pedro Gonçalves - Criação dos cards 
 Juan Pablo Valladas - Atualização das descrições dos cards
 Guilherme Gutierres - Página principal, funcionalidade dark mode e responsividade mobile
@@ -40,4 +40,5 @@ Para rodar o nosso projeto localmente, primeiro clonamos o repositório com o co
 
 ### Material complementar
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
-
+https://www.w3schools.com/js/default.asp
+https://www.alura.com.br
