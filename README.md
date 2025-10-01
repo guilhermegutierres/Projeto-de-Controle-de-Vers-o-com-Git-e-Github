@@ -39,6 +39,6 @@ Para rodar o nosso projeto localmente, primeiro clonamos o repositório com o co
 - Melhorar responsividade em dispositivos móveis
 
 ### Material complementar
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
-https://www.w3schools.com/js/default.asp
-https://www.alura.com.br
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+- https://www.w3schools.com/js/default.asp
+- https://www.alura.com.br
