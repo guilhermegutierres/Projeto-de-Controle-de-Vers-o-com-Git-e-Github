@@ -169,6 +169,32 @@ button[type="submit"]{
     font-weight:700; 
 }
 
+/* Estilos de validação */
+input.error,
+select.error,
+textarea.error {
+    border-color: #ff4444 !important;
+    background-color: #fff8f8;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Transições suaves */
+input, select, textarea, .file-input-label, button {
+    transition: all 0.3s ease;
+}
+
+    
+button[type="submit"]:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+}
+
 /* Ajuste para mobile */
 @media (max-width: 768px) {
     .preview-container {
