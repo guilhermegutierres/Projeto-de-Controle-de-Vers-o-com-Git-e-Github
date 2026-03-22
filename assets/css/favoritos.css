@@ -174,13 +174,15 @@ body.dark-theme .dark-toggle:hover { background-color: rgba(255,255,255,.1); }
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.2;
+  color: inherit;
 }
 
 /* Clamp em 3 linhas para descrição/título longo */
 .card_info h3 {
   margin: 0;
   font-weight: 400;
-  color: #1f1f1f;
+  color: inherit;
+  opacity: 0.8;
   line-height: 1.4;
   overflow: hidden;
   display: -webkit-box;
@@ -248,4 +250,8 @@ button svg { margin-left: 4px; }
   .topbar input { height: 40px; }
   .btn_card { gap: 8px; }
   .btn_card > * { flex: 1 1 100%; } /* botões 100% largura em telas muito pequenas */
+}
+
+body.dark-theme .card {
+  background-color: #1e1e1e;
 }
