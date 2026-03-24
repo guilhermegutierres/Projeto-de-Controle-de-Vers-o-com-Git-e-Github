@@ -112,24 +112,91 @@ header .container {
 .navbar {
     display: flex;
     align-items: center;
-    gap: 30px;
-    font-size: 25px;
+    gap: 20px;
+    font-size: 20px;
     font-family: 'Noyh', sans-serif;
 }
-
-.navbar_itens {
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-}
-
-    .navbar_itens a {
-        margin: 0 12px;
-    }
-
     .navbar_itens:hover {
         background-color: #64cd87;
     }
+
+/* =========================
+   Dropdown
+========================= */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #64cd87;
+    color: #fff;
+}
+
+
+/* Mostrar ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dark mode */
+body.dark-theme .dropdown-content {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+body.dark-theme .dropdown-content a {
+    color: #fff;
+}
+
+body.dark-theme .dropdown-content a:hover {
+    background-color: #333;
+}
+/* Adiciona setinha nos itens com dropdown */
+.dropdown > .navbar_itens {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+    padding: 6px 12px;
+}
+
+.dropdown > .navbar_itens::after {
+    content: "▼";               
+    font-size: 14px;            
+    margin-top: 0;              
+}
 
 /* =========================
    Topbar
@@ -515,13 +582,15 @@ body.dark-theme {
     .navbar {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px;
-        font-size: 18px;
+        gap: 20px;
+        font-size: 22px;
     }
 
     .navbar_itens {
-        padding: 6px 12px;
+        white-space: nowrap;
+        padding: 6px 10px;
         font-size: 16px;
+        
     }
 
     /* Topbar */
@@ -645,6 +714,7 @@ body.dark-theme {
     }
 
     .navbar_itens {
+        white-space: nowrap;
         padding: 5px 10px;
         font-size: 14px;
     }

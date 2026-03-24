@@ -35,7 +35,6 @@ Para rodar o nosso projeto localmente, primeiro clonamos o repositório com o co
 ### Melhorias futuras(ideias)
 - Implementar sistema de busca de receitas (já tem barra no layout)
 - Filtros por categoria (frango, carne, massas, doces etc.)
-- Adicionar funcionalidade de lista de compras
 - Melhorar responsividade em dispositivos móveis
 
 ### Material complementar
