@@ -4,55 +4,94 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Adicionar Receita</title>
-    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/add.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body class="light-theme">
     <header>
         <div class="container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="./index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
-                        <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
-                    </svg>
-                    <span>Que fome!</span>
-                </a>
-            </div>
+       <!-- Logo -->
+      <div class="logo">
+        <a href="./index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="rgba(100,205,135,1)">
+            <path d="M21 2V22H19V15H15V8C15 4.68629 17.6863 2 21 2ZM19 4.53C18.17 5 17 6.17 17 8V13H19V4.53ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z"></path>
+          </svg>
+          <span>Que fome!</span>
+        </a>
+      </div>
 
-            <!-- Navbar -->
-            <div class="navbar">
-                <a href="#" class="navbar_itens">Frango</a>
-                <a href="#" class="navbar_itens">Carne</a>
-                <a href="#" class="navbar_itens">Massas</a>
-                <a href="#" class="navbar_itens">Bolos</a>
-                <a href="#" class="navbar_itens">Doces</a>
-            </div>
+<div class="navbar">
+  <div class="dropdown">
+    <a href="#" class="navbar_itens">Entradas</a>
+    <div class="dropdown-content">
+      <a href="#">Saladas</a>
+      <a href="#">Sopas</a>
+      <a href="#">Petiscos</a>
+    </div>
+  </div>
 
-            <!-- Topbar: pesquisa, dark mode e favoritos -->
-            <div class="topbar">
-                <!-- Pesquisa com ícone -->
-                <div class="search-wrapper">
-                    <input type="text" placeholder="O que quer cozinhar?" id="search">
-                    <i class="ri-search-line"></i>
-                    <ul id="results"></ul>
-                </div>
+  <div class="dropdown">
+    <a href="#" class="navbar_itens">Principais</a>
+    <div class="dropdown-content">
+      <a href="#">Massas</a>
+      <a href="#">Peixes</a>
+      <a href="#">Carnes</a>
+      <a href="#">Aves</a>
+      <a href="#">Vegetarianos</a>
+    </div>
+  </div>
 
-                <!-- Dark mode -->
-                <div class="dark-toggle">
-                    <i class="ri-moon-line"></i>
-                </div>
+  <div class="dropdown">
+    <a href="#" class="navbar_itens">Acompanhamentos</a>
+    <div class="dropdown-content">
+      <a href="#">Arroz</a>
+      <a href="#">Legumes</a>
+      <a href="#">Batatas</a>
+      <a href="#">Farofas</a>
+      <a href="#">Molhos</a>
+      <a href="#">Risotos</a>
+    </div>
+  </div>
 
-                <!-- Coração de favoritos -->
-                <div class="btn">
-                    <a href="./favoritos.html">
-                        <i class="ri-heart-line"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+  <div class="dropdown">
+    <a href="#" class="navbar_itens">Sobremesas</a>
+    <div class="dropdown-content">
+      <a href="#">Bolos</a>
+      <a href="#">Doces</a>
+      <a href="#">Tortas</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#" class="navbar_itens">Bebidas</a>
+    <div class="dropdown-content">
+      <a href="#">Sucos</a>
+      <a href="#">Drinks</a>
+      <a href="#">Cafés</a>
+    </div>
+  </div>
+</div>
+
+<!-- Topbar: pesquisa, dark mode e favoritos -->
+<div class="topbar">
+  <div class="search-wrapper">
+    <input type="text" placeholder="O que quer cozinhar?" id="search" />
+    <i class="ri-search-line"></i>
+    <ul id="results"></ul>
+  </div>
+
+  <div class="dark-toggle">
+    <i class="ri-moon-line"></i>
+  </div>
+
+  <div class="btn">
+    <a href="./favoritos.html">
+      <i class="ri-heart-line"></i>
+    </a>
+  </div>
+</div> <!-- fecha topbar -->
+
+  </header>
 
     <main class="container">
         <form id="formAdd" novalidate>
