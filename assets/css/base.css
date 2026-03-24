@@ -198,6 +198,22 @@ body.dark-theme .dropdown-content a:hover {
     margin-top: 0;              
 }
 
+/* ===== Dark mode para Footer ===== */
+body.dark-theme .site-footer {
+    background-color: #1e1e1e;   
+    color: #fff;                 
+}
+
+body.dark-theme .footer-container p,
+body.dark-theme .footer-nav a {
+    color: #ccc;                 
+}
+
+body.dark-theme .footer-nav a:hover {
+    color: #64cd87;              
+}
+
+
 /* =========================
    Topbar
 ========================= */
@@ -520,9 +536,10 @@ body.dark-theme {
 /* Footer */
 .site-footer {
     background-color: #e5e5e5;
-    padding: 20px 0;
+    padding: 20px 0;   
     margin-top: 40px;
     font-family: 'Noyh', sans-serif;
+    text-align: center; 
 }
 
 .footer-container {
@@ -532,7 +549,7 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
     .footer-container p {
