@@ -1,0 +1,22 @@
+h3 {
+  margin-top: 15px;
+  color: #64cd87;
+}
+
+body.dark-theme h3 {
+  color: #8de2a8;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.ingredientes-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.coluna {
+  width: 48%;
+}

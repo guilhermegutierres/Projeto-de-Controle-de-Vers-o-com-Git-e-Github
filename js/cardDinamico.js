@@ -74,7 +74,7 @@ function criarCardReceita(receita) {
             <h1>${receita.titulo}</h1>
             <h3>${descricao}</h3>
             <div class="btn_card">
-                <button class="btn_esquerda">Ingredientes</button>
+                <button class="btn_esquerda">Modo de preparo</button>
                 <button class="btn_direita">
                     ${isFavorito ? 'Desfavoritar' : 'Favoritar'}
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" 
@@ -90,9 +90,22 @@ function criarCardReceita(receita) {
     const btnIngredientes = card.querySelector('.btn_esquerda');
     const btnFavoritar = card.querySelector('.btn_direita');
 
-    if (btnIngredientes) {
-        btnIngredientes.addEventListener('click', () => mostrarIngredientes(receita.id));
+    const paginas = {
+    "1": "torta-frango.html",
+    "2": "carne-assada.html",
+    "3": "mousse-limao.html",
+    "4": "bolo-morango.html",
+    "5": "pao-frances.html",
+    "6": "macarrao.html"
+};
+
+btnIngredientes.addEventListener('click', () => {
+    const pagina = paginas[receita.id];
+
+    if (pagina) {
+        window.location.href = pagina;
     }
+});
 
     if (btnFavoritar) {
         btnFavoritar.addEventListener('click', () => toggleFavorito(receita.id, card));
